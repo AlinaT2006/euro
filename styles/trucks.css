@@ -1,0 +1,123 @@
+.trucks {
+  background: #b1a4a473;
+  padding: 50px 0;
+}
+
+.trucks__title a {
+  color: #000;
+  font-size: 30px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.trucks__title a:hover {
+  color: #c8a35f;
+}
+
+.trucks__title a::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 3px;
+  transition: 0.3s;
+  background: #c8a35f;
+}
+
+.trucks__title a:hover::after {
+  width: 100%;
+}
+
+.trucks__wrap {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px 30px;
+}
+
+.trucks__wrap-card-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.trucks__wrap-card_img img {
+  max-width: 320px;
+  width: 100%;
+  max-height: 320px;
+  border-radius: 50%;
+  border: #c8a35f solid 5px;
+  margin: 20px 0;
+}
+.trucks__wrap-card_img {
+  text-align: center;
+}
+
+.trucks__wrap-card-desc_title {
+  color: rgba(94, 86, 86, 0.521);
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.trucks__wrap-card-desc_text {
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  font-weight: 400;
+}
+
+.trucks__wrap-card-desc_btn {
+  color: #fff;
+  background: #161718;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px 15px;
+  transition: 0.3s;
+  border: none;
+  border-radius: 5px;
+}
+
+.trucks__wrap-card-desc_btn:hover {
+  background: #c8a35f;
+}
+
+@media screen and (max-width: 1100px) {
+  .trucks__wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .trucks__wrap {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .trucks__title {
+    text-align: center;
+  }
+}
+
+@media (hover:hover) {
+    .trucks__title a:hover {
+        color: #c8a35f;
+      }
+      .trucks__wrap-card-desc_btn:hover {
+        background: #c8a35f;
+      }
+}
+@media (hover:none) {
+    .trucks__title a:active {
+        color: #c8a35f;
+      }
+      .trucks__wrap-card-desc_btn:active {
+        background: #c8a35f;
+      }
+}
